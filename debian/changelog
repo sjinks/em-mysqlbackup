@@ -1,0 +1,29 @@
+em-mysqlbackup (1.4-1ppa1) trusty; urgency=low
+
+  * Trusty
+
+ -- Volodymyr Kolesnykov <volodymyr@wildwolf.name>  Fri, 17 Oct 2014 07:24:00 +0300
+
+em-mysqlbackup (1.3-1ppa1) precise; urgency=low
+
+  * Follow symbolic links when looking for old files
+
+ -- Vladimir Kolesnikov <vladimir@extrememember.com>  Sat, 25 May 2013 05:50:12 +0300
+
+em-mysqlbackup (1.2-1ppa1) precise; urgency=low
+
+  * Delete empty directories
+
+ -- Vladimir Kolesnikov <vladimir@extrememember.com>  Tue, 30 Apr 2013 18:30:00 +0300
+
+em-mysqlbackup (1.1-1ppa1) precise; urgency=low
+
+  * Ignore both information_schema and performace_schema (Bug #1)
+
+ -- Vladimir Kolesnikov <vladimir@extrememember.com>  Mon, 29 Apr 2013 10:00:00 +0300
+
+em-mysqlbackup (1.0-1ppa1) precise; urgency=low
+
+  * Initial public release
+
+ -- Vladimir Kolesnikov <vladimir@extrememember.com>  Mon, 29 Apr 2013 07:20:00 +0300

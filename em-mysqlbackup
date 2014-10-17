@@ -1,0 +1,23 @@
+#! /bin/sh
+
+MYSQL='/usr/bin/mysql --defaults-file=/etc/mysql/debian.cnf'
+MYSQLDUMP='/usr/bin/mysqldump --defaults-file=/etc/mysql/debian.cnf'
+BACKUP_DIR='/var/backups/mysql'
+DAYS_TO_KEEP=7
+
+for db in $($MYSQL -B -N -e 'SHOW DATABASES;' | grep -Ev '^(performance|information)_schema'); do
+	DATE=$(date +%Y%m%d-%H%M%S)
+
+	if $(echo $db | grep -q '^em_'); then
+		USER=$(echo $db | sed 's/^em_//g')
+		[ -d "/home/$USER/dbbackup" -a ! -L "$BACKUP_DIR/$db" ] && ln -ns "/home/$USER/dbbackup" "$BACKUP_DIR/$db"
+	else
+		[ -d "$BACKUP_DIR/$db" ] || mkdir "$BACKUP_DIR/$db"
+	fi
+
+	$MYSQLDUMP -E -K -R --opt --skip-comments --skip-add-locks --skip-lock-tables --single-transaction --quick --databases $db | gzip -6 -c > "$BACKUP_DIR/$db/$DATE.sql.gz"
+done
+
+find -L "$BACKUP_DIR" -type f -mtime +$DAYS_TO_KEEP -print0 | xargs --no-run-if-empty -0 rm -f
+find "$BACKUP_DIR" -type l -xtype l -print0 | xargs --no-run-if-empty -0 rm -f
+find "$BACKUP_DIR" -type d -empty -delete

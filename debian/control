@@ -1,0 +1,14 @@
+Source: em-mysqlbackup
+Section: database
+Priority: optional
+Maintainer: Volodymyr Kolesnykov <volodymyr@wildwolf.name>
+Build-Depends: debhelper (>= 7.0.50~)
+Standards-Version: 3.9.5
+Vcs-Git: git://github.com/sjinks/mysql-backup.git
+
+Package: em-mysqlbackup
+Architecture: any
+Depends: ${misc:Depends}, mysql-client
+Description: MySQL Database Backup for Extreme Member
+ mysql-backup is a tool used internally by Extreme Member
+ to backup MySQL databases
