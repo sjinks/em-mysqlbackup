@@ -1,3 +1,10 @@
+em-mysqlbackup (1.5) trusty; urgency=low
+
+  * Architecture is all, not any
+  * Added support for /etc/default/em-mysqlbackip
+
+ -- Volodymyr Kolesnykov <volodymyr@wildwolf.name>  Tue, 28 Oct 2014 20:58:00 +0200
+
 em-mysqlbackup (1.4-1ppa1) trusty; urgency=low
 
   * Trusty

@@ -1,0 +1,4 @@
+MYSQL='/usr/bin/mysql --defaults-file=/etc/mysql/debian.cnf'
+MYSQLDUMP='/usr/bin/mysqldump --defaults-file=/etc/mysql/debian.cnf'
+BACKUP_DIR='/var/backups/mysql'
+DAYS_TO_KEEP=7

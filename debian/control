@@ -7,7 +7,7 @@ Standards-Version: 3.9.5
 Vcs-Git: git://github.com/sjinks/mysql-backup.git
 
 Package: em-mysqlbackup
-Architecture: any
+Architecture: all
 Depends: ${misc:Depends}, mysql-client
 Description: MySQL Database Backup for Extreme Member
  mysql-backup is a tool used internally by Extreme Member

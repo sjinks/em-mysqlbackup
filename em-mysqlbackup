@@ -5,6 +5,8 @@ MYSQLDUMP='/usr/bin/mysqldump --defaults-file=/etc/mysql/debian.cnf'
 BACKUP_DIR='/var/backups/mysql'
 DAYS_TO_KEEP=7
 
+[ -r /etc/default/em-mysqlbackup ] && . /etc/default/em-mysqlbackup
+
 for db in $($MYSQL -B -N -e 'SHOW DATABASES;' | grep -Ev '^(performance|information)_schema'); do
 	DATE=$(date +%Y%m%d-%H%M%S)
 
