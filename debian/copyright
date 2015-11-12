@@ -3,15 +3,15 @@ Mon, 29 Apr 2013 07:20:00 +0300.
 
 Upstream Author:
 
-    Vladimir Kolesnikov <vladimir@extrememember.com>
+    Volodymyr Kolesnykov <volodymyr@wildwolf.name>
 
 Copyright:
 
-    Copyright (C) 2009-2013 Vladimir Kolesnikov
+    Copyright (C) 2009-2015 Volodymyr Kolesnykov
 
 License:
 
-    Copyright (c) 2009-2013, Vladimir Kolesnikov
+    Copyright (c) 2009-2015, Volodymyr Kolesnykov
 
     Permission is hereby granted, free of charge, to any person obtaining a copy
     of this software and associated documentation files (the "Software"),
@@ -31,5 +31,5 @@ License:
     OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
     IN THE SOFTWARE.
 
-The Debian packaging is (C) 2013, Vladimir Kolesnikov <vladimir@extrememember.com> and
+The Debian packaging is (C) 2013, Volodymyr Kolesnykov <vladimir@extrememember.com> and
 is licensed under the MIT License.
