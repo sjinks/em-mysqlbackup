@@ -3,7 +3,7 @@ Section: database
 Priority: optional
 Maintainer: Volodymyr Kolesnykov <volodymyr@wildwolf.name>
 Build-Depends: debhelper (>= 7.0.50~)
-Standards-Version: 3.9.5
+Standards-Version: 3.9.6
 Vcs-Git: git://github.com/sjinks/mysql-backup.git
 
 Package: em-mysqlbackup
